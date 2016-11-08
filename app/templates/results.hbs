@@ -1,5 +1,6 @@
-<ul>
+<div>
   {{#each model as |developer|}}
-    <li>{{developer.login}}</li>
+    <img src={{developer.avatar_url}} width="100px">
+    <h2>{{developer.login}}</h2>
   {{/each}}
-</ul>
+</div>
