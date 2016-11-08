@@ -1,11 +1,11 @@
-<form>
+<form {{action 'lookUp' on='submit'}}>
   <div class="form-group">
     <label for="location">Location</label>
-    {{input value=location type="text"}}
+    {{input value=location type="text" required="required"}}
   </div>
   <div class="form-group">
     <label for="language">Language</label>
-    {{input value=language type="text"}}
+    {{input value=language type="text" required="required"}}
   </div>
-  <button {{action 'lookUp'}} class="btn">Search</button>
+  <button class="btn">Search</button>
 </form>
