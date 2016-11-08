@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('about');
   this.route('watchlist');
   this.route('faq');
+  this.route('results');
 });
 
 export default Router;
