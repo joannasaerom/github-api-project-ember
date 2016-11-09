@@ -37,6 +37,19 @@ body {
   /*margin: 0 auto;*/
 }
 
+.jumbotron p {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px!important;
+  line-height: 40px;
+  color: #fff;
+  font-weight: 900;
+  /*margin: 0 auto;*/
+}
+
 .jumbotron {
   background: url(http://masterbranch.com/images/developers-image.jpg) 50% no-repeat;
   background-size: cover;
@@ -56,4 +69,10 @@ body {
   border-top: 4px solid #368dc9;
   padding: 40px 0;
   color: #fff;
+}
+
+/*display results*/
+
+.results {
+  padding-bottom: 30px;
 }
