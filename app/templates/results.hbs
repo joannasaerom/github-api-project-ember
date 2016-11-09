@@ -1,8 +1,15 @@
+<div class="container">
 
-  {{#each model as |developer|}}
-    <h2>{{developer.login}}</h2>
-    <ul>
-      <li>{{developer.followers}}</li>
-      <li>{{developers.following}}</li>
-    </ul>
-  {{/each}}
+    {{#each model as |developer|}}
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{developer.login}}</h3>
+        </div>
+        <div class="panel-body">
+          Basic panel example
+        </div>
+      </div>
+    {{/each}}
+
+
+</div>

@@ -9,7 +9,6 @@ export default Ember.Component.extend({
         location: this.get('location'),
         language: this.get('language')
       };
-
       this.sendAction('lookUp', params);
     },
     updateLocation(value){
