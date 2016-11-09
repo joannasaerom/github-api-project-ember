@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function(params){
     var url = 'https://api.github.com/search/users?q=location:' + params.location +  '+followers:>100+language:' + params.language + '?access_token=dc59464a6d2be7507b70311bb89fa84fff4701dd&per_page=100';
-
+    var candidatesInformation = [];
     var candidates = [];
 
     Ember.$.getJSON(url).then(function(responseJSON){
@@ -46,16 +46,17 @@ export default Ember.Route.extend({
 
         $.when.apply($, candidatesInfo).done(function(){
 
-          var candidatesInformation = [];
+
           for(var m = 0, len = arguments.length; m < len; m++){
-            candidatesInformation.push(arguments[m][0]);
+            candidatesInformation.pushObject(arguments[m][0]);
           }
           console.log(candidatesInformation);
-          return candidatesInformation;
+
 
 
         }); //end the second when
       }); //end the first when
     }); // end the initial Github API call
+    return candidatesInformation;
   } //end model
 }); // end ember export
