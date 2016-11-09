@@ -1,15 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  watchList: Ember.inject.service(watch-user),
+  watchUser: Ember.inject.service('watch-user'),
   model: function(params){
     var url = 'https://api.github.com/search/users?q=location:' + params.location +  '+followers:>100+language:' + params.language + '?access_token=dc59464a6d2be7507b70311bb89fa84fff4701dd&per_page=100';
     var candidatesInformation = [];
     var candidates = [];
-    var candidatesInformation = [];
 
     Ember.$.getJSON(url).then(function(responseJSON){
-
       var users = responseJSON.items;
 
       var usernames = [];
@@ -49,6 +47,7 @@ export default Ember.Route.extend({
 
         $.when.apply($, candidatesInfo).done(function(){
 
+
           for(var m = 0, len = arguments.length; m < len; m++){
             candidatesInformation.pushObject(arguments[m][0]);
           }
@@ -57,12 +56,13 @@ export default Ember.Route.extend({
 
 
         }); //end the second when
-
       }); //end the first when
     }); // end the initial Github API call
     return candidatesInformation;
   },
   actions:{
-
+    addToWatch(developer){
+      this.get('watchUser').add(developer);
+    }
   }
 }); // end ember export

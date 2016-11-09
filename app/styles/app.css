@@ -76,3 +76,6 @@ body {
 .results {
   padding-bottom: 30px;
 }
+.clickable{
+  cursor: pointer;
+}
