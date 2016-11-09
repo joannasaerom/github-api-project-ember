@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  location: 'Portland',
+  language: 'JavaScript',
   actions: {
     lookUp() {
       var params = {
