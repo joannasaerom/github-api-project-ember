@@ -63,6 +63,12 @@ export default Ember.Route.extend({
   actions:{
     addToWatch(developer){
       this.get('watchUser').add(developer);
+    },
+    expandProfile(developer){
+      var params = {
+        email: this.get('email')
+      };
+      this.sendAction('expandProfile', params);
     }
   }
 }); // end ember export

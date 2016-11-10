@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('watchlist');
   this.route('faq');
   this.route('results', {path: '/results/:location/:language'});
+  this.route('fullcontact', {path: '/fullcontact/:email'});
 });
 
 export default Router;
