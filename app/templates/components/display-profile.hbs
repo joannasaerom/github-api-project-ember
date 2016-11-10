@@ -6,10 +6,14 @@
 
 <div class="container">
 
-{{log fullContact.devProfile}}
-{{fullContact.devProfile.contactInfo.fullName}}
-{{fullContact.devProfile.demographics.gender}}
-{{fullContact.devProfile.demographics.locationGeneral}}
+<!-- {{log fullContact.devProfile}} -->
+<p>
+  Gender: {{fullContact.devProfile.demographics.gender}}
+</p>
+<p>
+  Location: {{fullContact.devProfile.demographics.locationGeneral}}
+</p>
+
 
 {{#each fullContact.devProfile.socialProfiles as |website|}}
   <div>
