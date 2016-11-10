@@ -28,7 +28,29 @@
       </ul>
     </div>
     <div class="col-md-6">
-      could we display the github info here? I can't figure out how to bring the data
+      <a href="{{fullContact.developer.html_url}}" target="_blank"><img src="{{fullContact.developer.avatar_url}}" alt="avatar" class="img-responsive profile-picture center-block"/></a>
+      <div class="text-center">
+
+        <p>
+          <strong>GitHub Username:</strong> {{fullContact.developer.login}}
+        </p>
+        {{#if fullContact.developer.bio}}
+          <p>
+            Bio: {{fullContact.developer.bio}}
+          </p>
+        {{else}}
+          <p>
+          </p>
+        {{/if}}
+        {{#if fullContact.developer.email}}
+          <p>
+            Email: {{fullContact.developer.email}}
+          </p>
+          {{else}}
+            <p>
+            </p>
+          {{/if}}
+        </div>
     </div>
   </div>
 </div>
