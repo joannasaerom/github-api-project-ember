@@ -2,3 +2,11 @@
 {{fullContact.devProfile.contactInfo.fullName}}
 {{fullContact.devProfile.demographics.gender}}
 {{fullContact.devProfile.demographics.locationGeneral}}
+
+{{#each fullContact.devProfile.socialProfiles as |website|}}
+  <div>
+    {{website.typeName}}
+    {{website.url}}
+    {{website.username}}
+  </div>
+{{/each}}
