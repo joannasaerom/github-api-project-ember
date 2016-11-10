@@ -126,3 +126,7 @@ body {
   height: 20px;
   float: right;
 }
+
+.panel > .panel-heading {
+    background-color: #368dc9;
+}

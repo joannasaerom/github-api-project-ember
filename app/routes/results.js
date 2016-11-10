@@ -47,7 +47,6 @@ export default Ember.Route.extend({
 
         $.when.apply($, candidatesInfo).done(function(){
 
-
           for(var m = 0, len = arguments.length; m < len; m++){
             candidatesInformation.pushObject(arguments[m][0]);
           }
