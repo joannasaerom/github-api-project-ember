@@ -16,7 +16,7 @@
             <h3 class="panel-title title">{{developer.name}}</h3>
           </div>
           <div class="panel-body">
-            <a href="{{developer.html_url}}" target="_blank"><img src="{{developer.avatar_url}}" alt="avatar" class="img-responsive profile-picture"/></a>
+            <a href="{{developer.html_url}}" target="_blank"><img src="{{developer.avatar_url}}" alt="avatar" class="img-responsive profile-picture center-block"/></a>
             <p>
               <strong>Username:</strong> {{developer.login}}
             </p>
@@ -26,12 +26,16 @@
               </p>
             {{else}}
               <p>
-                Bio not available
               </p>
             {{/if}}
+            {{#if developer.bio}}
               <p>
                 Email: {{developer.email}}
               </p>
+              {{else}}
+                <p>
+                </p>
+              {{/if}}
           </div>
 
           <div class="panel-footer">
