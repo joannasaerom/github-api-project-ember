@@ -5,8 +5,17 @@
 </div>
 
 <div class="container">
-  {{log fullContact.devProfile}}
 
-  {{fullContact.devProfile.demographics.gender}}
-  {{fullContact.devProfile.demographics.locationGeneral}}
+{{log fullContact.devProfile}}
+{{fullContact.devProfile.contactInfo.fullName}}
+{{fullContact.devProfile.demographics.gender}}
+{{fullContact.devProfile.demographics.locationGeneral}}
+
+{{#each fullContact.devProfile.socialProfiles as |website|}}
+  <div>
+    {{website.typeName}}
+    {{website.url}}
+    {{website.username}}
+  </div>
+{{/each}}
 </div>
