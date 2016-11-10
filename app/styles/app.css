@@ -76,3 +76,16 @@ body {
 .results {
   padding-bottom: 30px;
 }
+
+.profile-picture{
+  margin-bottom: 15px;
+}
+
+.col-md-4:nth-child(3n+1){
+    clear: left;
+}
+
+/*.panel {
+  height: 580px;
+  overflow: hidden;
+}*/
