@@ -5,21 +5,30 @@
 </div>
 
 <div class="container">
-
-<!-- {{log fullContact.devProfile}} -->
-<p>
-  Gender: {{fullContact.devProfile.demographics.gender}}
-</p>
-<p>
-  Location: {{fullContact.devProfile.demographics.locationGeneral}}
-</p>
-
-
-{{#each fullContact.devProfile.socialProfiles as |website|}}
-  <div>
-    {{website.typeName}}
-    {{website.url}}
-    {{website.username}}
+  <div class="row">
+    <div class="col-md-12">
+      <div class="well">
+        <p>
+          <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{fullContact.devProfile.demographics.locationGeneral}}
+        </p>
+      </div>
+    </div>
   </div>
-{{/each}}
+  <!-- {{log fullContact.devProfile}} -->
+
+  <div class="row">
+    <div class="col-md-6">
+      <ul class="list-group">
+        <li class="list-group-item"><h4 class="blue-title">Social Media Profiles:</h4></li>
+        {{#each fullContact.devProfile.socialProfiles as |website|}}
+          <li class="list-group-item">
+            <a href="{{website.url}}" target="_blank">{{website.typeName}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    <div class="col-md-6">
+      could we display the github info here? I can't figure out how to bring the data
+    </div>
+  </div>
 </div>
