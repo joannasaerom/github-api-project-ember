@@ -85,7 +85,6 @@ body {
     clear: left;
 }
 
-/*.panel {
-  height: 580px;
-  overflow: hidden;
-}*/
+.clickable{
+  cursor: pointer;
+}
