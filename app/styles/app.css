@@ -88,3 +88,8 @@ body {
 .clickable{
   cursor: pointer;
 }
+
+.watchlist-icon{
+  height: 20px;
+  float: right;
+}

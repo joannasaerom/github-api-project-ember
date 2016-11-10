@@ -28,7 +28,20 @@
             </p>
           </div>
 
-          <div class="panel-footer"><span class="clickable" {{action 'addToWatch' developer}}>add to watchlist</span> {{'email-link' developer.email}} / {{'full-profile' developer.email}}</div>
+          <div class="panel-footer">
+            <div class="row">
+              <div class="col-md-4">
+                  {{#link-to 'fullcontact'}}<p {{action 'viewProfile' developer.email}}>full profile</p>{{/link-to}}
+              </div>
+              <div class="col-md-4 text-center">
+                {{'email-link' developer.email}}
+              </div>
+              <div class="col-md-4">
+                <img src="https://github.com/saeromjoa/github-api-project-ember/blob/master/public/assets/images/add_watchlist.png?raw=true" {{action 'addToWatch' developer}} class="img-responsive watchlist-icon" alt="add to watchlist"/>
+
+              </div>
+            </div>
+          </div>
 
         </div>
       </div>
