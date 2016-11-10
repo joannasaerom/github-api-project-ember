@@ -2,6 +2,8 @@
 
 Git: Hire is an application that allows recruiters to search for quality developers in major cities. Recruiters select the city and language they desire and the application pulls quality candidates using an algorithm developed by the team. The application generates candidates and their information using the GitHub API and the Full Contact API.
 
+![app screenshot](https://github.com/saeromjoa/github-api-project-ember/blob/master/public/assets/images/githire_screenshot.png)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
