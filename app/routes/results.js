@@ -52,7 +52,7 @@ export default Ember.Route.extend({
           for(var m = 0, len = arguments.length; m < len; m++){
             candidatesInformation.pushObject(arguments[m][0]);
           }
-      
+
 
 
 
@@ -71,8 +71,8 @@ export default Ember.Route.extend({
       };
       this.sendAction('expandProfile', params);
     },
-    viewProfile(email){
-      this.get('fullContact').getProfile(email);
+    viewProfile(developer){
+      this.get('fullContact').getProfile(developer);
     }
   }
 }); // end ember export
