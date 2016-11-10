@@ -8,6 +8,7 @@ export default Ember.Route.extend({
     var candidatesInformation = [];
     var candidates = [];
 
+
     Ember.$.getJSON(url).then(function(responseJSON){
       var users = responseJSON.items;
 
