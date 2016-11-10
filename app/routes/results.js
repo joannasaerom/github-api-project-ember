@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   watchUser: Ember.inject.service('watch-user'),
+  fullContact: Ember.inject.service('full-contact'),
   model: function(params){
     var url = 'https://api.github.com/search/users?q=location:' + params.location +  '+followers:>100+language:' + params.language + '?access_token=dc59464a6d2be7507b70311bb89fa84fff4701dd&per_page=100';
     var candidatesInformation = [];
@@ -69,6 +70,9 @@ export default Ember.Route.extend({
         email: this.get('email')
       };
       this.sendAction('expandProfile', params);
+    },
+    viewProfile(email){
+      this.get('fullContact').getProfile(email);
     }
   }
 }); // end ember export

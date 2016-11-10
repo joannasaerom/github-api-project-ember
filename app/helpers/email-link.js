@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export function emailLink(params) {
-  console.log(params[0]);
   if (params[0] === undefined || params[0] === null){
     return new Ember.String.htmlSafe('<span> </span>');
   } else{
