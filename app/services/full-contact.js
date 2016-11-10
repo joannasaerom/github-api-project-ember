@@ -10,10 +10,10 @@ export default Ember.Service.extend({
     + params + '&apiKey=41c5b4d6ca4abb13';
     Ember.$.getJSON(url).then(function(responseJSON) {
       responseObject = responseJSON;
-      // console.log(responseObject);
+
     }).then(function(){
       controller.set('devProfile', responseObject);
     });
-    // console.log(controller.get('devProfile'));
+
   }
 });
