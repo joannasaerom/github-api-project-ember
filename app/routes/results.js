@@ -8,28 +8,28 @@ export default Ember.Route.extend({
     var candidatesInformation = [];
     var candidates = [];
 
-
     Ember.$.getJSON(url).then(function(responseJSON){
       var users = responseJSON.items;
-
       var usernames = [];
+
       for(var j = 0; j < users.length; j++){
         usernames.push(users[j].login);
       }
 
       var repos = [];
+
       for(var i = 0; i < usernames.length; i++){
         repos.push(Ember.$.getJSON('https://api.github.com/users/' + usernames[i] + '/repos?&per_page=100&access_token=dc59464a6d2be7507b70311bb89fa84fff4701dd'));
       }
 
       $.when.apply($, repos).done(function(){
-
         var allrepos = [];
         for(var i = 0, len = arguments.length; i < len; i++){
           allrepos.push(arguments[i][0]);
         }
 
         var candidates = [];
+
         for(var j = 0; j < allrepos.length; j++){
           var topRepos = [];
           for (var k = 0; k < allrepos[j].length; k++){
@@ -52,7 +52,7 @@ export default Ember.Route.extend({
           for(var m = 0, len = arguments.length; m < len; m++){
             candidatesInformation.pushObject(arguments[m][0]);
           }
-          console.log(candidatesInformation);
+      
 
 
 
