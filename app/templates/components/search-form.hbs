@@ -1,8 +1,8 @@
 <div class="search-form">
   <form class="form-inline" >
     <div class="form-group">
-      <label for="location">Location</label>
-      <select class="form-control" id="location" onchange={{action 'updateLocation' value="target.value"}} >
+      <label for="location">LOCATION:</label>
+      <select class="form-control form-select" id="location" onchange={{action 'updateLocation' value="target.value"}} >
         <option value="austin">Austin</option>
         <option value="boston">Boston</option>
         <option value="chicago">Chicago</option>
@@ -16,9 +16,9 @@
       </select>
 
     </div>
-    <div class="form-group">
-      <label for="language">Language</label>
-      <select class="form-control" id="language" onchange={{action 'updateLanguage' value="target.value"}} >
+    <div class="form-group language-input">
+      <label for="language">LANGUAGE:</label>
+      <select class="form-control form-select" id="language" onchange={{action 'updateLanguage' value="target.value"}} >
         <option value="c#">C#</option>
         <option value="c++">C++</option>
         <option value="CSS">CSS</option>
@@ -32,6 +32,6 @@
       </select>
 
     </div>
-    <button {{action 'lookUp'}} class="btn btn-primary">Search</button>
+    <button {{action 'lookUp'}} class="btn btn-primary">FIND CANDIDATES</button>
   </form>
 </div>
