@@ -10,6 +10,20 @@ body {
   font-weight: 900;
 }
 
+.blue-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  color: #368dc9;
+}
+
+.index-content {
+  margin-bottom: 50px;
+}
+
+.team-profile {
+  height: 300px;
+}
+
 /*navbar*/
 
 .navbar-default {
@@ -30,10 +44,11 @@ body {
   width: 100%;
   padding-left: 15px;
   padding-right: 15px;
-  font-size: 30px!important;
+  font-size: 35px!important;
   line-height: 50px;
   color: #fff;
   font-weight: 900;
+  margin-bottom: 30px;
   /*margin: 0 auto;*/
 }
 
@@ -64,6 +79,24 @@ body {
   color: #fff;
 }
 
+.language-input {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.form-select {
+  margin-left: 10px;
+}
+
+.index-content {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.description {
+  margin-top: 20px;
+}
+
 .footer {
   background-color: #1c1c1c;
   border-top: 4px solid #368dc9;
@@ -92,4 +125,8 @@ body {
 .watchlist-icon{
   height: 20px;
   float: right;
+}
+
+.panel > .panel-heading {
+    background-color: #368dc9;
 }

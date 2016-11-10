@@ -1,25 +1,25 @@
 <div class="search-form">
   <form class="form-inline" >
     <div class="form-group">
-      <label for="location">Location</label>
-      <select class="form-control" id="location" onchange={{action 'updateLocation' value="target.value"}} >
+      <label for="location">LOCATION:</label>
+      <select class="form-control form-select" id="location" onchange={{action 'updateLocation' value="target.value"}} >
         <option value="austin">Austin</option>
         <option value="boston">Boston</option>
         <option value="chicago">Chicago</option>
         <option value="los-angeles">Los Angeles</option>
         <option value="new-york">New York</option>
         <option value="philadelphia">Philadelphia</option>
-        <option value="provo">Provo</option>
         <option value="portland" selected="selected">Portland</option>
         <option value="san-francisco">San Francisco</option>
+        <option value="seattle">Seattle</option>
         <option value="washington-dc">Washington DC</option>
       </select>
 
     </div>
-    <div class="form-group">
-      <label for="language">Language</label>
-      <select class="form-control" id="language" onchange={{action 'updateLanguage' value="target.value"}} >
-        <option value="C#">C#</option>
+    <div class="form-group language-input">
+      <label for="language">LANGUAGE:</label>
+      <select class="form-control form-select" id="language" onchange={{action 'updateLanguage' value="target.value"}} >
+        <option value="C%23">C#</option>
         <option value="C%2B%2B">C++</option>
         <option value="CSS">CSS</option>
         <option value="HTML">HTML</option>
@@ -32,6 +32,6 @@
       </select>
 
     </div>
-    <button {{action 'lookUp'}} class="btn btn-primary">Search</button>
+    <button {{action 'lookUp'}} class="btn btn-primary">FIND CANDIDATES</button>
   </form>
 </div>
