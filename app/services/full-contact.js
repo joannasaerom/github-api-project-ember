@@ -15,7 +15,7 @@ export default Ember.Service.extend({
       responseObject = responseJSON;
       for (var i = 0; i < responseJSON.socialProfiles.length; i++){
         if (responseJSON.socialProfiles[i].type === "twitter"){
-          twitter = responseJSON.socialProfiles[i].username;
+          twitter = responseJSON.socialProfiles[i].url;
         }
       }
 

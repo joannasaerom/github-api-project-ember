@@ -53,9 +53,6 @@ export default Ember.Route.extend({
             candidatesInformation.pushObject(arguments[m][0]);
           }
 
-
-
-
         }); //end the second when
       }); //end the first when
     }); // end the initial Github API call
