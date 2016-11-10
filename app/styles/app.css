@@ -76,6 +76,15 @@ body {
 .results {
   padding-bottom: 30px;
 }
+
+.profile-picture{
+  margin-bottom: 15px;
+}
+
+.col-md-4:nth-child(3n+1){
+    clear: left;
+}
+
 .clickable{
   cursor: pointer;
 }
